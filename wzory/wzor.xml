@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package   nazwa rozszerzenia
+  ~ @copyright Copyright (c)2006-2020 Nicholas K. Dionysopoulos / Akeeba Ltd
+  ~ @license   GNU General Public License version 3, or later
+  -->
+
+<extension version="2.5.0" type="language" group="system" method="upgrade">    <! - method = "upgrade" jest obowiązkowe od 3.4 - >
+    <name>Nazwa rozszerzenia lub PLG_SYSTEM_AKEEBAUPDATECHECK</name>    <! - nazwa powinna zawierać tylko znaki ALFA od wersji 3.7 ->
+    <packagename>pl-PL</packagename>    <!-- nazwa pakietu musi być taka sama jak nazwa dla pkg_whatever.xml -->
+    <author>nazwisko autora (np. Projekt Joomla!)</author>
+    <authorEmail>e-mail autora (np. admin@joomla.org)</authorEmail>
+</authorEmail>
+<authorUrl>adres URL do strony internetowej autora (np. www.joomla.org)</authorUrl>
+<copyright>oświadczenie o prawach autorskich (np. (C) 2005 - 2011 Open Source Matters. Wszelkie prawa zastrzeżone.)</copyright>
+<license>oświadczenie o licencji (np. GNU General Public License version 3, or later; patrz LICENCJA.txt)</license>
+<creationDate>data utworzenia lub wydania (np. 2020-06-17)</creationDate>
+<version>numer wersji rozszerzenia (np. 1.6.0)</version><! - podczas aktualizacji zmień wersję nr 3.xxx, wyświetli się w menedżerze ->
+<description>opis komponentu. To jest pole do przetłumaczenia. (np. COM_BANNERS_XML_DESCRIPTION)</description>
+<files>
+    <filename plugin="akeebaupdatecheck">akeebaupdatecheck.php</filename>
+    <filename>.htaccess</filename>
+    <filename>web.config</filename>
+</files>
+<languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.plg_system_akeebaupdatecheck.ini</language>
+    <language tag="en-GB">en-GB/en-GB.plg_system_akeebaupdatecheck.sys.ini</language>
+</languages>
+<config>
+    <fields name="params">
+        <fieldset name="basic">
+            <field name="email" type="text" default="" size="40" label="PLG_SYSTEM_AKEEBAUPDATECHECK_EMAIL_LBL" description="PLG_SYSTEM_AKEEBAUPDATECHECK_EMAIL_DESC" />
+        </fieldset>
+    </fields>
+</config>
+
+<scriptfile>script.php</scriptfile>
+</extension>
